@@ -1,5 +1,5 @@
 # coding: utf-8
-from di import a, b, c, d, e, f, g, h, i, j1, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, os, qs, ps, z2, ti, u2
+from di import a, b, c, d, e, f, g, h, i, j1, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, os, qs, ps, z2, ti, u2, z3
 
 def dino():
 	print (i + "%s " + nome_visitante) % sala
@@ -8,17 +8,31 @@ def dino():
 	print l
 	primeira_escolha = raw_input()
 	if primeira_escolha == "1":
-		print "gravar"
+		print m
 	elif primeira_escolha == "2":
-		escolha = raw_input("Deseja mesmo entrar?")
+		escolha = raw_input(n)
 		if escolha == t or escolha == ti:
 			buraco_negro()
 		elif escolha == u or escolha == u2:
 			dino()
 	elif primeira_escolha == "3":
-		print "23"
+		menu_principal()
 	else:
-		print "32"
+		print v
+		menu_principal()
+
+def menu_principal():
+	print s
+	sala = raw_input()
+	if sala == o or sala == os:
+		dino()
+	elif sala == p or sala == ps:
+		sauna()
+	elif sala == q or sala == qs:
+		wow()
+	else:
+		print z2
+
 
 def buraco_negro():
 	contador = 0
@@ -28,10 +42,20 @@ def buraco_negro():
 	print "DEU MUITO RUIMMMMM"	
 
 def sauna():
-	print "oi"
+	print (i + "%s " + nome_visitante) % sala
+	print r
+	escolha_sauna = raw_input()
+	if escolha_sauna == "1":
+		print z4
+	elif escolha_sauna == "2":
+		print z3
+	else:
+		menu_principal()
+
 
 def wow():
-	print "oi2"
+	print (i + "%s " + nome_visitante) % sala
+
 
 def inicio():
 	print a
@@ -49,9 +73,9 @@ def inicio():
 	if sala == o or sala == os:
 		dino()
 	elif sala == p or sala == ps:
-		sauna()
-	elif sala == q or sala == qs:
 		wow()
+	elif sala == q or sala == qs:
+		sauna()
 	else:
 		print z2
 
