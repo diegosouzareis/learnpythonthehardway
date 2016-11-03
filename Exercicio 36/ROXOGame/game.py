@@ -37,7 +37,7 @@ def menu_principal():
 def buraco_negro():
 	contador = 0
 	while (contador < 9):
-   		print 'VOCÊ NAO DEVERIA TER FEITO ISOOOOO, ESTAVA BRINCANDOOOOOOOOOOO, AGORA O NUBANK ESTA EM PARADO NO TEMPOOOOO', contador
+   		print 'VOCÊ NAO DEVERIA TER FEITO ISOOOOO, ESTAVA BRINCANDOOOOOOOOOOO, AGORA O ROXOBank ESTA EM PARADO NO TEMPOOOOO', contador
         contador = contador + 1
 	print "DEU MUITO RUIMMMMM"	
 
