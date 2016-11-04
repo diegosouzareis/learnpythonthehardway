@@ -61,7 +61,6 @@ def wow():
 	else:
 		menu_principal()
 
-
 def inicio():
 	print a
 	print b
@@ -85,5 +84,3 @@ def inicio():
 		print z2
 
 inicio()
-
-
