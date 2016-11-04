@@ -42,3 +42,11 @@ z = "Obrigado por vir visitar o ROXObank"
 z2 = "Essa sala não existe ou não esta disponivel para acesso!"
 z3 = "Parece que precisamos trocar as canetas depois voce escreve ;)"
 z4 = "Você ligou a TV, parece estar passando The Walking Dead"
+z5 = "VOCÊ NAO DEVERIA TER FEITO ISOOOOO, ESTAVA BRINCANDOOOOOOOOOOO, AGORA O ROXOBank ESTA EM PARADO NO TEMPOOOOO"
+z6 = "DEU MUITO RUIMMMMM"
+r2 = """Aqui é uma sala de reunião bem legal e bem grande tambem hahaha:
+1 - Procurar alguma coisa
+2 - Tirar foto
+3 - Sair"""
+r3 = "O que voce esta fazendo, cuidado com o que procura MUHAAHAHA"
+r4 = "BOAAA, depois compatilhe essa foto :)"
