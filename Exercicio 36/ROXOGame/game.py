@@ -1,86 +1,86 @@
 # coding: utf-8
-from di import a, b, c, d, e, f, g, h, i, j1, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, os, qs, ps, z2, ti, u2, z3, z4, z5, z6, r2, r3, r4
+from di import decisoes, salas, sim, nao, dialogos_basicos, dialogos
 
 def dino():
-	print (i + "%s " + nome_visitante) % sala
-	print j1
-	print k
-	print l
+	print (dialogos_basicos['6'] + "%s " + nome_visitante) % sala
+	print dialogos['3']
+	print dialogos['4']
+	print decisoes['terceira']
 	primeira_escolha = raw_input()
 	if primeira_escolha == "1":
-		print m
+		print dialogos['1']
 	elif primeira_escolha == "2":
-		escolha = raw_input(n)
-		if escolha == t or escolha == ti:
+		escolha = raw_input(dialogos['2'])
+		if escolha == sim or escolha == sim.lower().strip():
 			buraco_negro()
-		elif escolha == u or escolha == u2:
+		elif escolha == nao or escolha == nao.lower().strip():
 			dino()
 	elif primeira_escolha == "3":
 		menu_principal()
 	else:
-		print v
+		print dialogos['6']
 		menu_principal()
 
 def menu_principal():
-	print s
+	print dialogos_basicos['8']
 	sala = raw_input()
-	if sala == o or sala == os:
+	if sala == salas['sala1'] or sala == salas['sala1'].lower().strip():
 		dino()
-	elif sala == q or sala == qs:
+	elif sala == salas['sala2'] or sala == salas['sala2'].lower().strip():
 		sauna()
-	elif sala == p or sala == ps:
+	elif sala == salas['sala3'] or sala == salas['sala3'].lower().strip():
 		wow()
 	else:
-		print z2
+		print dialogos['7']
 
 
 def buraco_negro():
 	contador = 0
 	while (contador < 9):
-   		print z5, contador
+   		print dialogos['10'], contador
         contador = contador + 1
-	print z6	
+	print dialogos['11']	
 
 def sauna():
-	print r
+	print decisoes['quarta']
 	escolha_sauna = raw_input()
 	if escolha_sauna == "1":
-		print z4
+		print dialogos['9']
 	elif escolha_sauna == "2":
-		print z3
+		print dialogos['8']
 	else:
 		menu_principal()
 
 def wow():
-	print r2
+	print decisoes['segunda']
 	escolha_wow = raw_input()
 	if escolha_wow == "1":
-		print r3
+		print dialogos['12']
 	elif escolha_wow == "2":
-		print r4
+		print dialogos['13']
 	else:
 		menu_principal()
 
 def inicio():
-	print a
-	print b
+	print dialogos_basicos['4']
+	print dialogos_basicos['3']
 	global nome_visitante
-	nome_visitante = raw_input("%s " % c)
-	print d
-	print f
-	print g
-	print h
+	nome_visitante = raw_input("%s " % dialogos_basicos['2'])
+	print dialogos_basicos['1']
+	print dialogos_basicos['5']
+	print dialogos_basicos['9']
+	print decisoes['primeira']
 
 	global sala
 	sala = raw_input()
 
-	if sala == o or sala == os:
+	if sala == salas['sala1'] or sala == salas['sala1'].lower().strip():
 		dino()
-	elif sala == p or sala == ps:
-		wow()
-	elif sala == q or sala == qs:
+	elif sala == salas['sala2'] or sala == salas['sala2'].lower().strip():
 		sauna()
+	elif sala == salas['sala3'] or sala == salas['sala3'].lower().strip():
+		wow()
 	else:
-		print z2
+		print dialogos['7']
 
 inicio()
