@@ -4,7 +4,7 @@ Para rodar:
   - E importe o modulo criado "parser"
   - from ex48.parser import *
   - Depois teste o codigo
-  - x = parse_sentenca([('verbo','run'), ('direction','north')])
+  - x = parse_sentenca([('verbo','run'), ('direcao','north')])
   - x.sujeito
   - x.verbo
   - x.objeto

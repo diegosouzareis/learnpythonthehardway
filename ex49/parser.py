@@ -39,9 +39,9 @@ def pular(lista_de_palavras, tipo_de_palavra):
 def parse_verbo(lista_de_palavras):
     pular(lista_de_palavras, 'stop')
 
-    if olhadinha(lista_de_palavras) == 'verb':
+    if olhadinha(lista_de_palavras) == 'verbo':
 
-        return partida(lista_de_palavras, 'verb')
+        return partida(lista_de_palavras, 'verbo')
 
     else:
 
@@ -55,9 +55,9 @@ def parse_objeto(lista_de_palavras):
     if proxima_palavra == 'noun':
 
         return partida(lista_de_palavras, 'noun')
-    elif proxima_palavra == 'direction':
+    elif proxima_palavra == 'direcao':
 
-        return partida(lista_de_palavras, 'direction')
+        return partida(lista_de_palavras, 'direcao')
     else:
         raise ParserError("Esperava um substantivo ou direcao a seguir.")
 
@@ -68,16 +68,15 @@ def parse_sujeito(lista_de_palavras):
 
 	if proxima_palavra == 'noun':
 		return partida(lista_de_palavras, 'noun')
-	elif proxima_palavra == 'verb':
+	elif proxima_palavra == 'verbo':
 		return ('noun', 'player')
 	else:
 		raise ParserError("Esperava um verbo a seguir.")
 
 def parse_sentenca(lista_de_palavras):
-    	subj = parse_sujeito(lista_de_palavras)
-    	verb = parse_verbo(lista_de_palavras)
+    	sujeito = parse_sujeito(lista_de_palavras)
+    	verbo = parse_verbo(lista_de_palavras)
     	obj = parse_objeto(lista_de_palavras)
 
-    	return Sentenca(subj, verb, obj)
-
+    	return Sentenca(sujeito, verbo, obj)
 
