@@ -59,7 +59,7 @@ def parse_objeto(lista_de_palavras):
 
         return partida(lista_de_palavras, 'direction')
     else:
-        raise ParserError("Esperava um substantivo ou direção a seguir.")
+        raise ParserError("Esperava um substantivo ou direcao a seguir.")
 
 
 def parse_sujeito(lista_de_palavras):
