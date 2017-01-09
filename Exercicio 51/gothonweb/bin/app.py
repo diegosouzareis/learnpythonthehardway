@@ -6,7 +6,7 @@ urls = (
 
 app = web.application(urls, globals())
 
-render = web.template.render('templates/')
+render = web.template.render('templates/hello_form.html')
 
 class Index(object):
     def GET(self):
