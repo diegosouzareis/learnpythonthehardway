@@ -2,46 +2,46 @@ from nose.tools import *
 from ex48 import lexicon
 
 
-def test_directions():
-    assert_equal(lexicon.scan("north"), [('direction', 'north')])
-    result = lexicon.scan("north south east")
-    assert_equal(result, [('direction', 'north'),
-                          ('direction', 'south'),
-                          ('direction', 'east')])
+def test_direcoes():
+    assert_equal(lexicon.scan("norte"), [('direcao', 'norte')])
+    resultado = lexicon.scan("norte sul oeste")
+    assert_equal(resultado, [('direcao', 'norte'),
+                          ('direcao', 'sul'),
+                          ('direcao', 'oeste')])
 
-def test_verbs():
-    assert_equal(lexicon.scan("go"), [('verb', 'go')])
-    result = lexicon.scan("go kill eat")
-    assert_equal(result, [('verb', 'go'),
-                          ('verb', 'kill'),
-                          ('verb', 'eat')])
+def test_verbos():
+    assert_equal(lexicon.scan("vai"), [('verbo', 'vai')])
+    resultado = lexicon.scan("vai mata come")
+    assert_equal(resultado, [('verbo', 'vai'),
+                          ('verbo', 'mata'),
+                          ('verbo', 'come')])
 
 
-def test_stops():
-    assert_equal(lexicon.scan("the"), [('stop', 'the')])
-    result = lexicon.scan("the in of")
-    assert_equal(result, [('stop', 'the'),
-                          ('stop', 'in'),
-                          ('stop', 'of')])
+def test_para():
+    assert_equal(lexicon.scan("o"), [('para', 'o')])
+    resultado = lexicon.scan("o dentro para")
+    assert_equal(resultado, [('para', 'o'),
+                          ('para', 'dentro'),
+                          ('para', 'para')])
 
 
 def test_nouns():
-    assert_equal(lexicon.scan("bear"), [('noun', 'bear')])
-    result = lexicon.scan("bear princess")
-    assert_equal(result, [('noun', 'bear'),
-                          ('noun', 'princess')])
+    assert_equal(lexicon.scan("urso"), [('noun', 'urso')])
+    resultado = lexicon.scan("urso princesa")
+    assert_equal(resultado, [('noun', 'urso'),
+                          ('noun', 'princesa')])
 
-def test_numbers():
-    assert_equal(lexicon.scan("1234"), [('number', 1234)])
-    result = lexicon.scan("3 91234")
-    assert_equal(result, [('number', 3),
-                          ('number', 91234)])
+def test_numeros():
+    assert_equal(lexicon.scan("1234"), [('numero', 1234)])
+    resultado = lexicon.scan("3 91234")
+    assert_equal(resultado, [('numero', 3),
+                          ('numero', 91234)])
 
 
 def test_errors():
     assert_equal(lexicon.scan("ASDFADFASDF"), [('error', 'ASDFADFASDF')])
-    result = lexicon.scan("bear IAS princess")
-    assert_equal(result, [('noun', 'bear'),
+    resultado = lexicon.scan("urso IAS princesa")
+    assert_equal(resultado, [('noun', 'urso'),
                           ('error', 'IAS'),
-                          ('noun', 'princess')])
+                          ('noun', 'princesa')])
     

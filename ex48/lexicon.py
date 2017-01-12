@@ -1,19 +1,19 @@
 
 lexicon = {
-    ('directions', 'north'),
-    ('directions', 'south'),
-    ('directions', 'east'),
-    ('directions', 'west')
+    ('direcoes', 'norte'),
+    ('direcoes', 'sul'),
+    ('direcoes', 'oeste'),
+    ('direcoes', 'leste')
     }
 
-def scan(text):
+def scan(texto):
 
-    words = text.lower().split()
-    pairs = []
+    palavras = texto.lower().split()
+    pares = []
 
-    for word in words:
-        word_type = lexicon[word]
-        tupes = (word, word_type) 
-        pairs.append(tupes)
+    for palavra in palavras:
+        tipo_de_palavra = lexicon[palavra]
+        tuplas = (palavra, tipo_de_palavra) 
+        pares.append(tuplas)
 
-    return pairs
+    return pares

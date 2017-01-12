@@ -1,31 +1,31 @@
-lexicon = {'north': 'direction', 
-			'south':'direction', 
-			'east': 'direction', 
-			'go': 'verb',
-			'kill': 'verb',
-			'eat': 'verb',
-			'the': 'stop',
-			'in': 'stop',
-			'of': 'stop',
-			'bear': 'noun',
-			'princess': 'noun',
+lexicon = {'norte': 'direcao', 
+			'sul':'direcao', 
+			'oeste': 'direcao', 
+			'vai': 'verbo',
+			'mata': 'verbo',
+			'come': 'verbo',
+			'o': 'para',
+			'dentro': 'para',
+			'para': 'para',
+			'urso': 'noun',
+			'princesa': 'noun',
 			'IAS': 'error'}
 
 
-def scan(text):
+def scan(texto):
 
-        text = text
-        words = text.split()
+        texto = texto
+        palavras = texto.split()
         content = []
 
-        for word in words:
+        for palavra in palavras:
         	try:
-        		category = 'number'
-        		value = int(word)
-        		content.append((category, value))
+        		categoria= 'numero'
+        		valor = int(palavra)
+        		conteudo.append((categoria, valor))
         	except:
-        		category = lexicon.get(word, 'error')
-        		value = word
-        		content.append((category, word))
+        		categoria = lexicon.get(palavra, 'error')
+        		valor = palavra
+        		conteudo.append((categoria, palavra))
 
-        return content
+        return conteudo
