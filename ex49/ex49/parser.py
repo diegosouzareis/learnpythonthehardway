@@ -10,6 +10,11 @@ class Sentenca(object):
         self.objeto = obj[1]
 
 
+    def to_tuple(self):
+
+        return (self.sujeito, self.verbo, self.objeto)
+
+
 def olhadinha(lista_de_palavras):
 
 	if lista_de_palavras:
