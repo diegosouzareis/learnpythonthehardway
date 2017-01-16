@@ -13,11 +13,9 @@ lexicon = {'norte': 'direcao',
 
 
 def scan(texto):
-
         texto = texto
         palavras = texto.split()
         conteudo = []
-
         for palavra in palavras:
         	try:
         		categoria= 'numero'
@@ -27,5 +25,4 @@ def scan(texto):
         		categoria = lexicon.get(palavra, 'error')
         		valor = palavra
         		conteudo.append((categoria, palavra))
-
         return conteudo
