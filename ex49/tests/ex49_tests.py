@@ -57,7 +57,7 @@ def test_parse_sujeito():
     assert_raises(parser.ParserError, parser.parse_sentenca, lista_de_palavras)
 
 
-def test_parse_sentence():
+def test_parse_sentenca():
     lista_de_palavras = lexicon.scan('come porta')
     s = parser.parse_sentenca(lista_de_palavras)
     assert_equal(s.to_tuple(), ('urso', 'norte', 'porta'))
