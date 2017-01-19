@@ -8,3 +8,7 @@ Para rodar:
   - x.sujeito
   - x.verbo
   - x.objeto
+
+Para rodar os testes:
+  - Va para a pasta do exercicio dentro do terminal
+  - e escreva nosetests
