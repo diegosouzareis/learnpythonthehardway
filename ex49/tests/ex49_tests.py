@@ -47,19 +47,21 @@ def test_parse_objeto():
 
 
 def test_parse_sujeito():
-    lista_de_palavras = lexicon.scan('o urso come porta')
+    lista_de_palavras = lexicon.scan('come porta')
     s = parser.parse_sujeito(lista_de_palavras)
+    assert_equal(s.to_tuple(), ('urso', 'norte', 'porta'))
+
+
+def test_parse_sentenca():
+
+
+    lista_de_palavras = lexicon.scan('o urso come porta')
+    s = parser.parse_sentenca(lista_de_palavras)
     assert_equal(s.to_tuple(), ('urso', 'come', 'porta'))
     lista_de_palavras = lexicon.scan('dentro come porta')
     s = parser.parse_sentenca(lista_de_palavras)
     assert_equal(s.to_tuple(), ('player', 'come', 'porta'))
     lista_de_palavras = lexicon.scan('norte come porta')
     assert_raises(parser.ParserError, parser.parse_sentenca, lista_de_palavras)
-
-
-def test_parse_sentence():
-    lista_de_palavras = lexicon.scan('come porta')
-    s = parser.parse_sentenca(lista_de_palavras)
-    assert_equal(s.to_tuple(), ('urso', 'norte', 'porta'))
 
 
