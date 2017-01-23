@@ -1,7 +1,6 @@
 class ParserError(Exception):
     pass
 
-
 class Sentenca(object):
 
     def __init__(self, sujeito, verbo, obj):
@@ -56,7 +55,7 @@ def parse_objeto(lista_de_palavras):
 
 def parse_sujeito(lista_de_palavras):
 
-	sujeito = parse_sujeito(lista_de_palavras)
+    sujeito = parse_sujeito(lista_de_palavras)
     verbo = parse_verbo(lista_de_palavras)
     obj = parse_objeto(lista_de_palavras)
 

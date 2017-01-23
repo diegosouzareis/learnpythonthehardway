@@ -53,9 +53,7 @@ def test_parse_sujeito():
 
 
 def test_parse_sentenca():
-
-
-    lista_de_palavras = lexicon.scan('o urso come porta')
+    lista_de_palavras = lexicon.scan('urso come porta')
     s = parser.parse_sentenca(lista_de_palavras)
     assert_equal(s.to_tuple(), ('urso', 'come', 'porta'))
     lista_de_palavras = lexicon.scan('dentro come porta')
