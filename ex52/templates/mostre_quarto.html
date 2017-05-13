@@ -1,0 +1,16 @@
+$def com (quarto)
+
+<h1> $quarto.nome </h1>
+
+<pre>
+$quarto.descricao
+</pre>
+
+$if quarto.nome == "morte":
+    <p><a href="/">Jogar de novo?</a></p>
+$else:
+    <p>
+    <form action="/game" method="POST">
+        - <input type="text" name="action"> <input type="SUBMIT">
+    </form>
+    </p>
